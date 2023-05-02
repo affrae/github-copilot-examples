@@ -1,3 +1,9 @@
+def smallest(l):
+  """ find the 3 smallest elements in a list """
+    return sorted(l)[:3]
+
+
+
 def smallest(l,n):
   """ find the n smallest elements in a list without using sort """
   if n == 0:
@@ -23,7 +29,13 @@ def smallest(l,n):
 # the function smallest(l,n) has a time complexity of 0(n^2) and a space complexity of 0(n)
 # because it has to iterate through the list n times and create a new list of size n
 
-import unittest, random
+
+
+
+
+
+
+
 
 class TestSmallest(unittest.TestCase):
   # test smallest(l,n) with random, dynamically generated integers
@@ -31,7 +43,8 @@ class TestSmallest(unittest.TestCase):
     for i in range(100):
       l = random.randint(range(1000),random.randint(1,100))
       n = random.randint(1,len(l))
-      self.assertEqual(smallest(l,n),sorted(l)[:n])
+      theSmallest = smallest(l,n)
+      self.assertEqual(theSmallest,sorted(l)[:n])
 
 class TestSmallest(unittest.TestCase):
   # test smallest(l,n) with random, dynamically generated integers
@@ -40,6 +53,7 @@ class TestSmallest(unittest.TestCase):
     for i in range(100):
       l = random.sample(range(1000),random.randint(1,100))
       n = random.randint(1,len(l))
-      self.assertEqual(smallest(l,n),sorted(l)[:n])
+      theSmallest = smallest(l,n)
+      self.assertEqual(theSmallest,sorted(l)[:n])
       
 unittest.main()         
