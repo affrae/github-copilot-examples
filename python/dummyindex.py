@@ -6,6 +6,9 @@ def smallest(l):
 
 def smallest(l,n):
   """ find the n smallest elements in a list without using sort """
+  """ find the n smallest elements in a list without using sort()"""
+  """ find the n smallest elements in a list without using sort() or sorted()"""
+
   if n == 0:
     return []
   if len(l) == 0:
