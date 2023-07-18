@@ -1,4 +1,4 @@
-def smallest(l):
+def smallest(l): # type: ignore
   """ find the 3 smallest elements in a list """
   return sorted(l)[:3]
 
